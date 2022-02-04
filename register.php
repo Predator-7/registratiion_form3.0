@@ -90,7 +90,7 @@ text-align:center;">
             </pre>
             <button type="button " class="cancelbtn " style="color:White">Cancel</button><br>
             <br>
-            <span><a href="./hello.html">Already register?</a></span>
+            <span><a href="hello.php">Already register?</a></span>
     </div>
     <div class = "sub">
     <input type="submit" name="submit" align = "center">

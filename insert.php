@@ -125,7 +125,7 @@ $result3 =   mysqli_query($mysqli,"INSERT INTO enclosures (allotmentletter,caste
     {
        
     echo "Data Submitted successfully";
-    header("Location: hello.html");
+    header("Location: demo.php");
 
     }
     else

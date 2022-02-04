@@ -102,7 +102,7 @@
                 <input type="Password" name="password" placeholder="Enter Password" required>
                 
                 <a href="#">Forget your Password?</a><br>
-                <a href="register.html">Don't have account?</a>
+                <a href="register.php">Don't have account?</a>
    
                 <input type="submit" name="submit"><br>
             </form>

@@ -9,13 +9,9 @@ session_start();
 <?php
 include("config.php");
 
-echo "Hello";
 
 if(isset($_POST['submit']))
 {
-
-    echo "Lala";
-
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -57,7 +53,7 @@ else
 }
 else
 {
-    echo "connextion error";
+    echo "connection error";
 }
 
 
@@ -66,5 +62,3 @@ else
 
 
 ?>
-
-

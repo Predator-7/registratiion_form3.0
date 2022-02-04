@@ -141,7 +141,7 @@ include("config.php");
 <html>
 
 <head>
-<link rel="stylesheet" href="preview.css">
+<link rel="stylesheet" href="./css/preview.css">
 </head>
 
 <body>

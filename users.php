@@ -27,7 +27,7 @@ if(isset($_POST['submit']))
 
     if($main_result)
     {
-        header('Location: hello.php');
+        header('Location: index.php');
     }
 
 

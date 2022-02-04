@@ -1,8 +1,12 @@
-
+<?php
+session_start();
+?>
 
 <?php
 include("config.php");
 
+
+echo $_SESSION["username"];
 
 if(isset($_POST['submit']))
 {
@@ -87,23 +91,25 @@ $dd2 = $_POST['dd2'];
 $date2 = $_POST['date2'];
 $amount2 = $_POST['amount2'];
 $amount3 = $_POST['amount3'];
+
+$username = $_SESSION["username"];
  
 
 
 
  
 
-$result1 = mysqli_query($mysqli,"INSERT INTO basicdetails (englishname,hindiname,gender,bloodgroup,dob,mob1,mob2,email,aadhaar,fathername,fatheroccupation,mothername,motheroccupation,branch,minority,disability,coraddress1,peraddress1,coraddress2,peraddress2,coraddress3,peraddress3,corcity,percity,corstate,perstate,corpincode,perpincode,cormobno,permobno) values('$englishname','$hindiname','$gender','$bloodgroup','$dob','$mob1','$mob2','$email','$aadhaar','$fathername','$fatheroccupation','$mothername','$motheroccupation','$branch','$minority','$disability','$coraddress1','$peraddress1','$coraddress2','$peraddress2','$coraddress3','$peraddress3','$corcity','$percity','$corstate','$perstate','$corpincode','$perpincode','$cormobno','$permobno')");
+$result1 = mysqli_query($mysqli,"INSERT INTO basicdetails (englishname,hindiname,gender,bloodgroup,dob,mob1,mob2,email,aadhaar,fathername,fatheroccupation,mothername,motheroccupation,branch,minority,disability,coraddress1,peraddress1,coraddress2,peraddress2,coraddress3,peraddress3,corcity,percity,corstate,perstate,corpincode,perpincode,cormobno,permobno,username) values('$englishname','$hindiname','$gender','$bloodgroup','$dob','$mob1','$mob2','$email','$aadhaar','$fathername','$fatheroccupation','$mothername','$motheroccupation','$branch','$minority','$disability','$coraddress1','$peraddress1','$coraddress2','$peraddress2','$coraddress3','$peraddress3','$corcity','$percity','$corstate','$perstate','$corpincode','$perpincode','$cormobno','$permobno','$username')");
 
 
- $result2 =  mysqli_query($mysqli,"INSERT INTO education (board1,subject1,year1,mark1,grade1,board2,subject2,year2,mark2,grade2) values('$board1','$subject1','$year1',' $mark1','$grade1','$board2','$subject2','$year2','$mark2','$grade2')");
+ $result2 =  mysqli_query($mysqli,"INSERT INTO education (board1,subject1,year1,mark1,grade1,board2,subject2,year2,mark2,grade2,username) values('$board1','$subject1','$year1',' $mark1','$grade1','$board2','$subject2','$year2','$mark2','$grade2','$username')");
 
 
-$result3 =   mysqli_query($mysqli,"INSERT INTO enclosures (allotmentletter,castecertificate,rankcard,maharashtracard,idproof,obcncl,birthcertificate,disabilitycertificate,jeemarksheet,transfercertificate,incomecertificate,migration,aadhaarcard,gap) values('$allotmentletter','$castecertificate','$rankcard','$maharashtracard','$idproof','$obcncl','$birthcertificate','$disabilitycertificate','$jeemarksheet','$transfercertificate','$incomecertificate','$migration','$aadhaarcard','$gap')");
+$result3 =   mysqli_query($mysqli,"INSERT INTO enclosures (allotmentletter,castecertificate,rankcard,maharashtracard,idproof,obcncl,birthcertificate,disabilitycertificate,jeemarksheet,transfercertificate,incomecertificate,migration,aadhaarcard,gap,username) values('$allotmentletter','$castecertificate','$rankcard','$maharashtracard','$idproof','$obcncl','$birthcertificate','$disabilitycertificate','$jeemarksheet','$transfercertificate','$incomecertificate','$migration','$aadhaarcard','$gap','$username')");
 
-    $result4 = mysqli_query($mysqli,"INSERT INTO feesdetails ( dd1 , date1 , amount1 , dd2 , date2 , amount2 , amount3) values('$dd1','$date1','$amount1','$dd2','$date2','$amount2','$amount3')");
+    $result4 = mysqli_query($mysqli,"INSERT INTO feesdetails ( dd1 , date1 , amount1 , dd2 , date2 , amount2 , amount3 , username) values('$dd1','$date1','$amount1','$dd2','$date2','$amount2','$amount3','$username')");
 
-   $result5 = mysqli_query($mysqli,"INSERT INTO jeemaindetails(allotmentround,rollno,air,mark,score,year,allotmentcategory,candidatecategory) values('$allotmentround','$rollno','$air','$mark','$score','$year','$allotmentcategory','$candidatecategory')");
+   $result5 = mysqli_query($mysqli,"INSERT INTO jeemaindetails(allotmentround,rollno,air,mark,score,year,allotmentcategory,candidatecategory,username) values('$allotmentround','$rollno','$air','$mark','$score','$year','$allotmentcategory','$candidatecategory','$username')");
 
 
  $query1 = mysqli_query($mysqli,$result1);
@@ -117,11 +123,15 @@ $result3 =   mysqli_query($mysqli,"INSERT INTO enclosures (allotmentletter,caste
 
     if($main_result)
     {
+       
     echo "Data Submitted successfully";
+    header("Location: hello.html");
+
     }
-
-    // only left with implementing inner join 
-
+    else
+    {
+       echo "Errors Occured !!!";
+    }
 
 
    // echo $amount2;

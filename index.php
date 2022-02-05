@@ -93,7 +93,7 @@
 
     <body>
         <div class="loginbox">
-            <img src="logo.jpg" class="avatar">
+            <img src="./images/logo.jpg" class="avatar">
             <h1>Login Here</h1>
             <form action="login.php" method="post">
                 <p>Username</p>

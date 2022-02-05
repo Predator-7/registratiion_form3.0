@@ -63,7 +63,7 @@ text-align:center;">
     </p>
 
     <div class="imgcontainer">
-        <img src="logo.jpg" width="170px">
+        <img src="./images/logo.jpg" width="170px">
         <img </div>
 
 

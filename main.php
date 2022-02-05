@@ -2,7 +2,7 @@
 
 <head>
     
-   <link rel="stylesheet" href="main.css"> 
+   <link rel="stylesheet" href="./css/main.css"> 
     <title>Registration Form</title>
     <style>
         .footer {
@@ -21,7 +21,7 @@
         </div> 
     <legend>
         <center>
-            <h2><img src="iiitnlogo.jpeg" alt=""><b>Registration Form</b></h2>
+            <h2><img src="images/logo.jpg" alt=""><b>Registration Form</b></h2>
         </center>
     </legend><br>
 
